@@ -95,10 +95,10 @@ int main(void)
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
 
-  TIM4->CCR1=(int)62 * 115 / 100; //green
-  TIM4->CCR2=(int)17 * 115 / 100; //orange
-  TIM4->CCR3=(int)12 * 115 / 100; //red
-  TIM4->CCR4=(int)50 * 115 / 100; //blue
+  TIM4->CCR1=(int)62 * 109 / 100; //green
+  TIM4->CCR2=(int)17 * 109 / 100; //orange
+  TIM4->CCR3=(int)12 * 109 / 100; //red
+  TIM4->CCR4=(int)50 * 109 / 100; //blue
 
   /* USER CODE END 2 */
 
@@ -174,9 +174,9 @@ static void MX_TIM4_Init(void)
 
   /* USER CODE END TIM4_Init 1 */
   htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 16000;
+  htim4.Init.Prescaler = 16;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 115;
+  htim4.Init.Period = 109;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
